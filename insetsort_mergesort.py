@@ -81,12 +81,12 @@ for _ in range(100):
 merges = list(lista_testowe)
 insert = list(lista_testowe)
 
-wyniki_inster =[]
+wyniki_insert =[]
 beg_insert = time.time()
 for i in range(0, len(lista_testowe)):
     start_podejsci = time.time()
     insert[i] = insertionsort(insert[i])
-    wyniki_inster.append(time.time()-start_podejsci)
+    wyniki_insert.append(time.time()-start_podejsci)
 time_insert =  time.time() - beg_insert
 
 wyniki_merge = []
@@ -100,13 +100,11 @@ time_merge = time.time() - beg_merge
 
 
 
-print("Insertsort - średni czas to ",  srednia(wyniki_inster), "sekund")
-print("Insertsort - najkrótszy czas to ",  find_lowest(wyniki_inster), "sekund")
-print("Insertsort - najdłuższy czas to ",  find_longest(wyniki_inster), "sekund")
+print("Insertsort - średni czas to ",  srednia(wyniki_insert), "sekund")
+print("Insertsort - najkrótszy czas to ",  find_lowest(wyniki_insert), "sekund")
+print("Insertsort - najdłuższy czas to ",  find_longest(wyniki_insert), "sekund")
 print("Czas całego srotowania przez wstawianie to ", time_insert)
 print("Mergetsort - średni czas to ",  srednia(wyniki_merge), "sekund")
 print("Mergetsort - najkrótszy czas to ",  find_lowest(wyniki_merge), "sekund")
 print("Mergesort  - najdłuższy czas to ",  find_longest(wyniki_merge), "sekund")
 print("Czas całego srotowania przez łączenie to ", time_merge)
-#dodać listę i wpisaywac czasy kolejnyhc sortowań - wybrać najszybsze i najwolniejsze 
-# policzyć średni czas 
